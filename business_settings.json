@@ -6,7 +6,7 @@
   "closed": false,
   "closed_msg": "",
   "alert": true,
-  "alert_msg": "",
+  "alert_msg": "Heavy Traffic on all routes from Baner to Pune City ",
   "hours": {
     "Monday": {
       "open": "12:00",
