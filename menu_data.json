@@ -258,6 +258,26 @@
           }
         }
       ]
+    },
+    {
+      "name": "Savouries",
+      "items": [
+        {
+          "title": "Pizza",
+          "price": "₹0",
+          "description": "Pizza",
+          "image": "Images/Logo 3.jpg",
+          "quantity": "1 box",
+          "weight": "500 g",
+          "dietary": {
+            "contains_milk": true,
+            "contains_nuts": false,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false
+          }
+        }
+      ]
     }
   ]
 }
