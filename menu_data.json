@@ -131,58 +131,6 @@
       ]
     },
     {
-      "name": "Premium Cakes",
-      "items": [
-        {
-          "title": "Mango (Seasonal) Premium Cake",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "./images/jar cake.jpeg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "vegan": false,
-            "gluten_free": false,
-            "contains_nuts": true
-          }
-        },
-        {
-          "title": "Oreo Premium Cake",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "Images/WhatsApp_Image_2026-08-06_at_11.59.59_AM__2__1786018099401.jpeg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "contains_milk": false,
-            "contains_nuts": true,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false,
-            "eggless": false,
-            "custom_tag": ""
-          }
-        },
-        {
-          "title": "Choco Strawberry Premium Cake",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "Images/Logo_3_1786018115569.jpg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "contains_milk": false,
-            "contains_nuts": true,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false,
-            "eggless": false,
-            "custom_tag": ""
-          }
-        }
-      ]
-    },
-    {
       "name": "Healthy Cakes",
       "items": [
         {
