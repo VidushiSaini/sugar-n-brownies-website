@@ -5,8 +5,8 @@
   "address": "Supreme Estia, Pancard Club Rd, Baner Gaon, Pune 411045",
   "closed": false,
   "closed_msg": "",
-  "alert": false,
-  "alert_msg": "",
+  "alert": true,
+  "alert_msg": "Heavy traffic near Baner road, please plan your pickup accordingly.",
   "hours": {
     "Monday": {
       "open": "12:00",
