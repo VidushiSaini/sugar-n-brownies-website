@@ -5,3 +5,8 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
