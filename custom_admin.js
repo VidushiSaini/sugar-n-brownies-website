@@ -967,11 +967,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Update PIN Logic
-    document.getElementById('ops-update-pin-btn').addEventListener('click', async () => {
+    document.getElementById('ops-update-pin-btn').addEventListener('click', async (e) => {
+        const btn = e.currentTarget;
+        const spinner = btn.querySelector('.spinner');
         const currentPin = document.getElementById('ops-current-pin').value;
         const newPin = document.getElementById('ops-new-pin').value;
         const confirmPin = document.getElementById('ops-confirm-pin').value;
         const msgEl = document.getElementById('pin-update-msg');
+        
         msgEl.classList.remove('hidden', 'text-green-600', 'text-red-600');
 
         if (!currentPin || !newPin || !confirmPin) {
@@ -985,6 +988,9 @@ document.addEventListener('DOMContentLoaded', () => {
             msgEl.classList.add('text-red-600');
             return;
         }
+
+        btn.disabled = true;
+        if (spinner) spinner.classList.remove('hidden');
 
         try {
             const res = await fetch('/api/update-pin', {
@@ -1007,6 +1013,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch(e) {
             msgEl.textContent = 'Server error.';
             msgEl.classList.add('text-red-600');
+        } finally {
+            btn.disabled = false;
+            if (spinner) spinner.classList.add('hidden');
         }
     });
 });
