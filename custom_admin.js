@@ -108,23 +108,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Upload Helper
     const uploadImage = async (file) => {
-        try {
-            const formData = new FormData();
-            formData.append('image', file, file.name);
-            
-            const res = await fetch('/api/upload-image', {
-                method: 'POST',
-                body: formData
-            });
-            const data = await res.json();
-            if (data.success) {
-                return data.filePath;
-            } else {
-                throw new Error(data.error || 'Upload failed');
-            }
-        } catch (e) {
-            throw e;
-        }
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = async () => {
+                try {
+                    const base64 = reader.result;
+                    const res = await fetch('/api/upload-image', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ filename: file.name, base64: base64 })
+                    });
+                    const data = await res.json();
+                    if (data.success) {
+                        resolve(data.filePath);
+                    } else {
+                        reject(new Error(data.error || 'Upload failed'));
+                    }
+                } catch (e) {
+                    reject(e);
+                }
+            };
+            reader.onerror = error => reject(error);
+            reader.readAsDataURL(file);
+        });
     };
 
     // Data Management
