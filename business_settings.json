@@ -3,7 +3,7 @@
   "phone": "+91 9870198838",
   "website": "https://sugarnbrownies-ind.com",
   "address": "Supreme Estia, Pancard Club Rd, Baner Gaon, Pune 411045",
-  "closed": false,
+  "closed": true,
   "closed_msg": "",
   "alert": false,
   "alert_msg": "",
