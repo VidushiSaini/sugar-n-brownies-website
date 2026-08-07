@@ -32,9 +32,12 @@ Welcome to the testing guide for your new Bakery Website! This document will wal
 - In the search bar, type a keyword like **"Vegan"** or **"Eggless"**.
 - Verify that the menu instantly filters down to show only the items that have those specific dietary tags or words in their description.
 
+> **CRITICAL REFRESH TIMING:** 
+> Before testing any changes you save, you **MUST wait 60 seconds** for the site to rebuild on Netlify. After a full minute, refresh the live page exactly once.
+
 ## 5. Business Operations
-**Goal:** Ensure you can update your opening hours and contact info.
-- In the **Admin Dashboard**, go to the **Business Operations** tab.
-- Change Sunday's operating hours to "Closed".
-- Click **Update Operations**.
-- Currently, these settings are stored in the backend database (`business_settings.json`) and are ready to be integrated into the footer or contact page in future updates!
+**Goal:** Ensure you can update your opening hours, alerts, and contact info.
+- In the **Admin Dashboard**, go to the **Operations** tab.
+- **Testing Closed Days:** Change Sunday's opening time to `00:00` and its closing time to `00:00`. Save, wait 60 seconds, and verify the Weekly Hours tooltip on the live site reads "Closed" for Sunday.
+- **Testing Banners:** Check "Temporarily Closed" but leave the message empty. Save, wait 60 seconds, and verify the live site shows a red banner saying "We are temporarily closed."
+- **Testing Mutual Exclusivity:** Go back to the Admin Dashboard. Check "Traffic / Disruption Notice". Notice that "Temporarily Closed" automatically unchecks. Type "Heavy traffic on Baner road" in the box. Save, wait 60 seconds, and verify the live site now shows a yellow banner starting with "Traffic / Disruption Notice: Heavy traffic...".

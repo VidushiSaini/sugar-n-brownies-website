@@ -49,11 +49,26 @@ Manage the highlights on your homepage.
 ---
 
 ## 4. Business Operations Tab
-Control your behind-the-scenes data.
+Control your behind-the-scenes data and live site alerts.
 
 - **Store Hours:** Update your opening and closing times for each day of the week.
+  > [!TIP]
+  > **Marking a Day as Closed:** To mark the bakery as closed for a specific day, set both the Open and Close times to the exact same value (e.g., `00:00` to `00:00`). The website will automatically detect this zero-minute window and beautifully display "Closed" for that day on the live site's tooltip.
+- **Live Status & Alerts:** Toggle the "Temporarily Closed" or "Traffic / Disruption Notice" banners.
+  - These two banners are mutually exclusive; selecting one automatically deselects the other.
+  - **Leaving the text blank is fine!** If you toggle them on but don't type a custom message, the system automatically injects a default fallback message (e.g., "We are temporarily closed." or "Please plan your pickup accordingly.").
+  - The Traffic banner will automatically prepend the text "Traffic / Disruption Notice: " to whatever message you type.
 - **Contact Info:** Update your phone number, email, and social media links.
-- Click **"Update Operations"** to save.
+- Click **"Save Business Operations"** to save.
 
 > [!NOTE]
-> **Where it reflects:** Currently stored in the database for future updates to your website's footer and contact pages.
+> **Where it reflects:** The banners instantly appear globally across the top of your live website. The hours and contact info dynamically update the footer and banner tooltips.
+
+---
+
+## 5. Important Note on Saving Updates (Please Read!)
+Your bakery website runs on a highly secure, serverless infrastructure via Netlify and GitHub. 
+
+> [!IMPORTANT]
+> **Wait 60 Seconds Before Refreshing!** 
+> After you click "Save" on any tab (Menu, Operations, Gallery, etc.), the system automatically triggers a Netlify CI/CD pipeline to safely rebuild your live website. You **MUST wait approximately 60 seconds** after saving before you refresh your live `sugar-n-brownies.com` website to see the changes. Do not refresh multiple times; wait a full minute, and the site will instantly update on your next single refresh!
