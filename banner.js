@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('business_settings.json?t=' + new Date().getTime())
+    fetch(`/business_settings.json?t=${Date.now()}`, { cache: 'no-store' })
         .then(res => {
             if (!res.ok) throw new Error("Settings not found");
             return res.json();
@@ -86,9 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span>${settings.closed_msg}</span>
                     </div>
                 `;
-            }
-
-            if (settings.alert && settings.alert_msg && settings.alert_msg.trim() !== '') {
+            } else if (settings.alert && settings.alert_msg && settings.alert_msg.trim() !== '') {
                 bannerHtml += `
                     <div class="bg-yellow-500 text-black text-center py-2 px-4 shadow-md z-50 relative font-semibold flex justify-center items-center gap-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>

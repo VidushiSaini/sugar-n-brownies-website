@@ -921,6 +921,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mutually Exclusive Toggles
+    const closedToggle = document.getElementById('ops-closed-toggle');
+    const closedMsg = document.getElementById('ops-closed-msg');
+    const alertToggle = document.getElementById('ops-alert-toggle');
+    const alertMsg = document.getElementById('ops-alert-msg');
+
+    if (closedToggle && alertToggle) {
+        closedToggle.addEventListener('change', () => {
+            if (closedToggle.checked) {
+                alertToggle.checked = false;
+                alertMsg.value = '';
+            }
+        });
+
+        alertToggle.addEventListener('change', () => {
+            if (alertToggle.checked) {
+                closedToggle.checked = false;
+                closedMsg.value = '';
+            }
+        });
+    }
+
     // Save Settings
     document.getElementById('ops-save-btn').addEventListener('click', async () => {
         if(!settingsData) return;
