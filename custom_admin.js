@@ -975,7 +975,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const confirmPin = document.getElementById('ops-confirm-pin').value;
         const msgEl = document.getElementById('pin-update-msg');
         
-        msgEl.classList.remove('hidden', 'text-green-600', 'text-red-600');
+        msgEl.className = 'text-sm font-bold mt-2'; // Reset classes
 
         if (!currentPin || !newPin || !confirmPin) {
             msgEl.textContent = 'Please fill out all PIN fields.';
@@ -998,21 +998,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ currentPin, newPin })
             });
-            const data = await res.json();
             
-            if (res.ok && data.success) {
-                msgEl.textContent = 'PIN updated successfully!';
-                msgEl.classList.add('text-green-600');
-                document.getElementById('ops-current-pin').value = '';
-                document.getElementById('ops-new-pin').value = '';
-                document.getElementById('ops-confirm-pin').value = '';
+            // Handle success explicitly
+            if (res.ok) {
+                const data = await res.json();
+                if (data.success) {
+                    msgEl.textContent = 'PIN updated successfully!';
+                    msgEl.className = 'text-sm font-bold mt-2 text-green-600'; // Explicit green
+                    document.getElementById('ops-current-pin').value = '';
+                    document.getElementById('ops-new-pin').value = '';
+                    document.getElementById('ops-confirm-pin').value = '';
+                    return; // Exit early on success
+                } else {
+                    msgEl.textContent = data.error || 'Failed to update PIN.';
+                    msgEl.className = 'text-sm font-bold mt-2 text-red-600';
+                }
             } else {
-                msgEl.textContent = data.error || 'Failed to update PIN.';
-                msgEl.classList.add('text-red-600');
+                // If not OK, try to parse error but default to a fallback
+                let errorText = 'Failed to update PIN.';
+                try {
+                    const errorData = await res.json();
+                    if (errorData.error) errorText = errorData.error;
+                } catch(err) {}
+                msgEl.textContent = errorText;
+                msgEl.className = 'text-sm font-bold mt-2 text-red-600';
             }
         } catch(e) {
-            msgEl.textContent = 'Server error.';
-            msgEl.classList.add('text-red-600');
+            msgEl.textContent = 'Network or server error.';
+            msgEl.className = 'text-sm font-bold mt-2 text-red-600';
         } finally {
             btn.disabled = false;
             if (spinner) spinner.classList.add('hidden');

@@ -7,8 +7,10 @@ async function getFileSHA(filePath) {
     const response = await fetch(url, {
         headers: {
             'Authorization': `token ${GITHUB_TOKEN}`,
-            'Accept': 'application/vnd.github.v3+json'
-        }
+            'Accept': 'application/vnd.github.v3+json',
+            'Cache-Control': 'no-cache'
+        },
+        cache: 'no-store'
     });
 
     if (response.ok) {
@@ -60,8 +62,10 @@ async function getFileContent(filePath) {
     const response = await fetch(url, {
         headers: {
             'Authorization': `token ${GITHUB_TOKEN}`,
-            'Accept': 'application/vnd.github.v3+json'
-        }
+            'Accept': 'application/vnd.github.v3+json',
+            'Cache-Control': 'no-cache'
+        },
+        cache: 'no-store'
     });
 
     if (response.ok) {
