@@ -1,0 +1,41 @@
+{
+  "logo": "Images/Logo4.jpg",
+  "phone": "+91 9870198838",
+  "website": "https://sugarnbrownies.com",
+  "address": "Supreme Estia, Pancard Club Rd, Baner Gaon, Pune 411045",
+  "closed": false,
+  "closed_msg": "Taking a short baking break, back on Monday!",
+  "alert": false,
+  "alert_msg": "Heavy traffic near Baner road, please plan your pickup accordingly.",
+  "hours": {
+    "Monday": {
+      "open": "12:00",
+      "close": "21:00"
+    },
+    "Tuesday": {
+      "open": "09:00",
+      "close": "21:00"
+    },
+    "Wednesday": {
+      "open": "09:00",
+      "close": "21:00"
+    },
+    "Thursday": {
+      "open": "09:00",
+      "close": "21:00"
+    },
+    "Friday": {
+      "open": "09:00",
+      "close": "22:00"
+    },
+    "Saturday": {
+      "open": "12:00",
+      "close": "22:00"
+    },
+    "Sunday": {
+      "open": "12:00",
+      "close": "20:00"
+    }
+  },
+  "homepage_banner": "Images/banner2_1786015720432.jpeg"
+}

@@ -1,0 +1,330 @@
+{
+  "categories": [
+    {
+      "name": "Brownies",
+      "items": [
+        {
+          "title": "Choco Walnut Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/whatsapp-image-2026-08-06-at-2.24.10-pm.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "vegan": false,
+            "gluten_free": false,
+            "contains_nuts": true,
+            "contains_milk": true
+          }
+        },
+        {
+          "title": "Cookies N Cream Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "./images/jar cake.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "vegan": false,
+            "gluten_free": false,
+            "contains_nuts": true
+          }
+        },
+        {
+          "title": "Cheesecake Swirl Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/Logo_3_1786014783106.jpg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false
+          }
+        },
+        {
+          "title": "Nutella Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "./images/jar cake.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false
+          }
+        },
+        {
+          "title": "Drunken Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "./images/jar cake.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": false,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": "Dairy Free"
+          }
+        },
+        {
+          "title": "Chocolate Chip Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/Logo_3_1786015393916.jpg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": true,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        },
+        {
+          "title": "Mocha Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-06_at_11.59.58_AM__2__1786014171399.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        },
+        {
+          "title": "Salted Caramel Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/whatsapp-image-2026-08-06-at-2.24.09-pm.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Premium Cakes",
+      "items": [
+        {
+          "title": "Mango (Seasonal) Premium Cake",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "./images/jar cake.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "vegan": false,
+            "gluten_free": false,
+            "contains_nuts": true
+          }
+        },
+        {
+          "title": "Oreo Premium Cake",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-06_at_11.59.59_AM__2__1786018099401.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        },
+        {
+          "title": "Choco Strawberry Premium Cake",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/Logo_3_1786018115569.jpg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Healthy Cakes",
+      "items": [
+        {
+          "title": "Rawa Healthy Cake",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-06_at_11.59.59_AM__1__1786018218712.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        },
+        {
+          "title": "Chocochip Walnut Healthy Cake",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-06_at_2.24.10_PM__1__1786018230323.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        },
+        {
+          "title": "Banana Walnut Healthy Cake",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-06_at_2.24.09_PM_1786018244046.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cupcakes",
+      "items": [
+        {
+          "title": "Customised Cupcakes",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-06_at_2.24.10_PM__2__1786018193653.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Festive Special Cakes",
+      "items": [
+        {
+          "dietary": {
+            "contains_milk": true,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": true,
+            "sugar_free": false
+          },
+          "title": "Mango Delight",
+          "price": "300",
+          "image": "Images/WhatsApp Image 2026-08-06 at 12.00.00 PM (4).jpeg"
+        },
+        {
+          "dietary": {
+            "contains_milk": true,
+            "contains_nuts": false,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false
+          },
+          "title": "Valentines Cupcake Love",
+          "price": "200",
+          "description": "Red Velvet cupcakes topped with rich cream cheese swirl icing",
+          "image": "Images/WhatsApp Image 2026-08-06 at 2.24.10 PM (2).jpeg",
+          "quantity": "Pack of 4"
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {
+          "title": "Triple Truffle Fudge",
+          "price": "500",
+          "description": "Ooey Gooey goodness of milk, white and dark chocolate in one fudgy bite ",
+          "image": "Images/Logo 3.jpg",
+          "quantity": "10 pieces",
+          "weight": "250 gm",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": false,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false
+          }
+        },
+        {
+          "title": "Thandai Tres Leches",
+          "price": "100",
+          "description": "Thandai Tres Leches",
+          "image": "Images/WhatsApp Image 2026-08-06 at 12.00.01 PM _2_.jpeg",
+          "quantity": "1 Piece",
+          "weight": "100 gm",
+          "dietary": {
+            "contains_milk": true,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false
+          }
+        }
+      ]
+    }
+  ]
+}

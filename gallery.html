@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Sugar 'n Brownies</title>
+    <meta name="description" content="View our past custom cake orders and beautifully crafted baked goods.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FAF3E0',
+                            DEFAULT: '#D4A373',
+                            dark: '#603809',
+                            accent: '#A44A3F',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <script src="banner.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAF3E0; color: #4A4A4A; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; color: #603809; }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-brand-light shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <img class="h-14 w-14 rounded-full object-cover" src="Images/Logo 4.jpg" alt="Sugar 'n Brownies Logo">
+                        <span class="font-heading font-bold text-2xl text-brand-dark">Sugar 'n Brownies</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-brand-dark hover:text-brand-accent font-semibold transition-colors duration-200">Home</a>
+                    <a href="about.html" class="text-brand-dark hover:text-brand-accent font-semibold transition-colors duration-200">About Us</a>
+                    <a href="menu.html" class="text-brand-dark hover:text-brand-accent font-semibold transition-colors duration-200">Menu</a>
+                    <a href="gallery.html" class="text-brand-accent font-semibold transition-colors duration-200 border-b-2 border-brand-accent pb-1">Gallery</a>
+                    <a href="https://zomato.onelink.me/xqzv/lvqo7o1h" target="_blank" class="text-[#E23744] hover:text-red-700 font-bold transition-colors duration-200 flex items-center gap-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2h4a2 2 0 0 0-2-2zM4 8v12h16V8H4zm6 3h4v2h-4v-2z"/></svg> Zomato
+                    </a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-brand-dark hover:text-brand-accent focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-light border-t border-brand">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-dark hover:text-brand-accent">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-dark hover:text-brand-accent">About Us</a>
+                <a href="menu.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-dark hover:text-brand-accent">Menu</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-accent bg-brand bg-opacity-20">Gallery</a>
+                <a href="https://zomato.onelink.me/xqzv/lvqo7o1h" target="_blank" class="block px-3 py-2 rounded-md text-base font-bold text-[#E23744] hover:text-red-700">Order on Zomato</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-brand-dark">Custom Cake Gallery</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Take a look at some of our favorite custom creations. See something you like? Pre-order a similar design via WhatsApp!</p>
+        </div>
+
+        <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="text-center py-10 col-span-full" id="gallery-loading">
+                <svg class="animate-spin -ml-1 mr-3 h-8 w-8 text-brand inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <p class="mt-4 text-brand-dark font-medium">Loading gallery images...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
+            <div>
+                <h3 class="text-2xl font-heading font-bold mb-2 text-white">Sugar 'n Brownies</h3>
+                <p class="text-gray-300">Supreme Estia, Pancard Club Rd, Baner Gaon, Pune 411045</p>
+                <p class="text-brand mt-1 font-semibold">Open 24/7</p>
+            </div>
+            <div>
+                <p class="text-lg font-medium mb-3">Call us: <a href="tel:09870198838" class="text-brand hover:text-white transition-colors">098701 98838</a></p>
+                <div class="flex justify-center md:justify-start space-x-6">
+                    <a href="https://www.instagram.com/sugar.n.brownies_?igshid=YmMyMTA2M2Y%3D" target="_blank" class="text-gray-300 hover:text-brand transition-colors">Instagram</a>
+                    <a href="https://www.facebook.com/sugarnbrownies" target="_blank" class="text-gray-300 hover:text-brand transition-colors">Facebook</a>
+                    <a href="https://zomato.onelink.me/xqzv/lvqo7o1h" target="_blank" class="text-gray-300 hover:text-[#E23744] transition-colors font-bold">Zomato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

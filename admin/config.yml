@@ -1,0 +1,129 @@
+backend:
+  name: git-gateway
+local_backend: true
+media_folder: "Images"
+public_folder: "Images"
+collections:
+  - name: "menu"
+    label: "Menu Data"
+    files:
+      - label: "Menu Categories and Items"
+        name: "menu_data"
+        file: "menu_data.json"
+        description: "Manage the menu items here"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - label: "Category Name"
+                name: "name"
+                widget: "string"
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Price"
+                    name: "price"
+                    widget: "string"
+                  - label: "Description"
+                    name: "description"
+                    widget: "text"
+                    required: false
+                  - label: "Image"
+                    name: "image"
+                    widget: "image"
+                    required: false
+                  - label: "Quantity"
+                    name: "quantity"
+                    widget: "string"
+                    required: false
+                    hint: "e.g., 'Pack of 4'"
+                  - label: "Weight"
+                    name: "weight"
+                    widget: "string"
+                    required: false
+                    hint: "e.g., '500g'"
+                  - label: "Dietary Info"
+                    name: "dietary"
+                    widget: "object"
+                    fields:
+                      - label: "Contains Milk"
+                        name: "contains_milk"
+                        widget: "boolean"
+                        default: false
+                        required: false
+                      - label: "Contains Nuts"
+                        name: "contains_nuts"
+                        widget: "boolean"
+                        default: false
+                        required: false
+                      - label: "Vegan"
+                        name: "vegan"
+                        widget: "boolean"
+                        default: false
+                        required: false
+                      - label: "Gluten-Free"
+                        name: "gluten_free"
+                        widget: "boolean"
+                        default: false
+                        required: false
+                      - label: "Sugar-Free"
+                        name: "sugar_free"
+                        widget: "boolean"
+                        default: false
+                        required: false
+
+  - name: "offers"
+    label: "Offers"
+    files:
+      - label: "Active Offers"
+        name: "offers_data"
+        file: "offers_data.json"
+        description: "Manage homepage offers slider"
+        fields:
+          - label: "Offers List"
+            name: "offers_list"
+            widget: "list"
+            fields:
+              - label: "Title / Heading"
+                name: "title"
+                widget: "string"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+              - label: "Call-to-Action Type"
+                name: "cta_type"
+                widget: "select"
+                options: ["None", "Order via WhatsApp", "View Menu", "Order on Zomato"]
+                default: "None"
+              - label: "Custom Link (Optional)"
+                name: "custom_link"
+                widget: "string"
+                required: false
+                hint: "Use this if you want to link to a specific custom URL."
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - label: "Custom Cake Gallery"
+        name: "gallery_data"
+        file: "gallery_data.json"
+        description: "Manage gallery images"
+        fields:
+          - label: "Gallery List"
+            name: "gallery_list"
+            widget: "list"
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Title"
+                name: "title"
+                widget: "string"

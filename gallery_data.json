@@ -1,0 +1,32 @@
+{
+  "gallery_list": [
+    {
+      "image": "Images/cake9.jpeg",
+      "title": "New Custom Cake"
+    },
+    {
+      "image": "Images/cake1.jpeg",
+      "title": "Custom Floral Wedding Cake"
+    },
+    {
+      "image": "Images/cake2.jpeg",
+      "title": "Elegant Chocolate Drip Cake"
+    },
+    {
+      "image": "Images/cake3.jpeg",
+      "title": "Pastel Macaron Birthday Cake"
+    },
+    {
+      "image": "Images/cake4.jpeg",
+      "title": "Rustic Buttercream Masterpiece"
+    },
+    {
+      "image": "Images/cake5.jpeg",
+      "title": "Decadent Red Velvet Special"
+    },
+    {
+      "image": "Images/cake6.jpeg",
+      "title": "Classic Vanilla Bean Dream"
+    }
+  ]
+}
