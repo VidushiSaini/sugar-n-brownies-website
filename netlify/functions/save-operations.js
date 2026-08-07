@@ -18,6 +18,14 @@ exports.handler = async (event) => {
             finalData.hours = { ...existingData.hours, ...parsedData.hours };
         }
 
+        // Explicitly clear messages if toggles are off
+        if (finalData.closed === false) {
+            finalData.closed_msg = "";
+        }
+        if (finalData.alert === false) {
+            finalData.alert_msg = "";
+        }
+
         await commitFile(filename, JSON.stringify(finalData, null, 2), `Update ${filename} via Netlify Admin`);
 
         return {
