@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         
                         let statusText = 'Closed Today';
                         if (todayHours && todayHours.open && todayHours.close) {
-                            // simple check if closed based on global setting or hours
-                            if (settings.closed) {
+                            // Enforce "Closed" if toggled globally or if open matches close exactly
+                            if (settings.closed || todayHours.open === todayHours.close) {
                                 statusText = 'Currently Closed';
                             } else {
                                 statusText = `Open Today: ${todayHours.open} - ${todayHours.close}`;
@@ -68,7 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         tooltipHtml += '<p class="font-bold border-b pb-1 mb-2 text-brand-dark">Weekly Hours</p>';
                         ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].forEach(d => {
                             const h = settings.hours[d];
-                            const timeStr = (h && h.open && h.close) ? `${h.open} - ${h.close}` : 'Closed';
+                            
+                            // Check if open time strictly equals close time
+                            let timeStr = 'Closed';
+                            if (h && h.open && h.close) {
+                                timeStr = (h.open === h.close) ? 'Closed' : `${h.open} - ${h.close}`;
+                            }
+                            
                             const isToday = d === today ? 'font-bold text-brand' : 'text-gray-600';
                             tooltipHtml += `<div class="flex justify-between py-1 ${isToday}"><span>${d}</span><span>${timeStr}</span></div>`;
                         });
@@ -82,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const closedMsg = settings.closed_msg ? settings.closed_msg.trim() : '';
             const alertMsg = settings.alert_msg ? settings.alert_msg.trim() : '';
 
+            // Render Closed Banner (Falls back to default text if empty)
             if (settings.closed) {
                 const displayMsg = closedMsg || 'We are temporarily closed.';
                 bannerHtml += `
@@ -90,11 +97,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span>${displayMsg}</span>
                     </div>
                 `;
-            } else if (settings.alert && alertMsg !== '') {
+            } 
+            // Render Alert Banner (Always renders if checked, prepends standard prefix)
+            else if (settings.alert) {
+                const prefix = 'Traffic / Disruption Notice: ';
+                const displayAlertMsg = alertMsg ? (prefix + alertMsg) : (prefix + 'Please plan your pickup accordingly.');
                 bannerHtml += `
                     <div class="bg-yellow-500 text-black text-center py-2 px-4 shadow-md z-50 relative font-semibold flex justify-center items-center gap-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span>${alertMsg}</span>
+                        <span>${displayAlertMsg}</span>
                     </div>
                 `;
             }
