@@ -31,21 +31,6 @@
           }
         },
         {
-          "title": "Cheesecake Swirl Brownie",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "Images/Logo_3_1786014783106.jpg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "contains_milk": false,
-            "contains_nuts": true,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false
-          }
-        },
-        {
           "title": "Nutella Brownie",
           "price": "₹120",
           "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
