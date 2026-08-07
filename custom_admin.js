@@ -148,16 +148,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loadData = async () => {
         try {
-            const mRes = await fetch('menu_data.json?t=' + new Date().getTime());
+            const mRes = await fetch(`/menu_data.json?t=${Date.now()}`, { cache: 'no-store' });
             menuData = await mRes.json();
             renderMenuFilters();
             renderMenuEditor();
 
-            const gRes = await fetch('gallery_data.json?t=' + new Date().getTime());
+            const gRes = await fetch(`/gallery_data.json?t=${Date.now()}`, { cache: 'no-store' });
             galleryData = await gRes.json();
             renderGalleryEditor();
 
-            const sRes = await fetch('business_settings.json?t=' + new Date().getTime());
+            const sRes = await fetch(`/business_settings.json?t=${Date.now()}`, { cache: 'no-store' });
             if (sRes.ok) {
                 settingsData = await sRes.json();
             } else {
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             renderSettingsEditor();
 
-            const cRes = await fetch('content_data.json?t=' + new Date().getTime());
+            const cRes = await fetch(`/content_data.json?t=${Date.now()}`, { cache: 'no-store' });
             if (cRes.ok) {
                 contentData = await cRes.json();
                 renderContentEditor();

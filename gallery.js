@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loading = document.getElementById('gallery-loading');
     const phoneNumber = '919870198838'; // India code + number
 
-    fetch('gallery_data.json')
+    fetch(`/gallery_data.json?t=${Date.now()}`, { cache: 'no-store' })
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();

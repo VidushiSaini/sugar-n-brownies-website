@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('content_data.json?t=' + new Date().getTime())
+    fetch(`/content_data.json?t=${Date.now()}`, { cache: 'no-store' })
         .then(res => {
             if (!res.ok) throw new Error("Content data not found");
             return res.json();

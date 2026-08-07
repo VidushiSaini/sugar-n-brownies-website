@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let slides = [];
     let autoSlideInterval;
 
-    fetch('offers_data.json')
+    // Load Offers Data
+    fetch(`/offers_data.json?t=${Date.now()}`, { cache: 'no-store' })
         .then(res => {
             if (!res.ok) throw new Error("Could not fetch offers");
             return res.json();

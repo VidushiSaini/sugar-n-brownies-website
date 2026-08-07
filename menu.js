@@ -239,7 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    fetch('menu_data.json')
+    // Load Menu Data
+    fetch(`/menu_data.json?t=${Date.now()}`, { cache: 'no-store' })
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
