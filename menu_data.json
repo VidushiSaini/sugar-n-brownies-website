@@ -4,20 +4,6 @@
       "name": "Brownies",
       "items": [
         {
-          "title": "Choco Walnut Brownie",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "Images/whatsapp-image-2026-08-06-at-2.24.10-pm.jpeg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "vegan": false,
-            "gluten_free": false,
-            "contains_nuts": true,
-            "contains_milk": true
-          }
-        },
-        {
           "title": "Cookies N Cream Brownie",
           "price": "₹120",
           "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
@@ -105,6 +91,23 @@
           "weight": "500g",
           "dietary": {
             "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        },
+        {
+          "title": "Choco Walnut Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-19_at_1.41.36_PM_1787127782501.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": true,
             "contains_nuts": true,
             "vegan": false,
             "gluten_free": false,
