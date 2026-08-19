@@ -4,23 +4,6 @@
       "name": "Brownies",
       "items": [
         {
-          "title": "Mocha Brownie",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "Images/WhatsApp_Image_2026-08-06_at_11.59.58_AM__2__1786014171399.jpeg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "contains_milk": false,
-            "contains_nuts": true,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false,
-            "eggless": false,
-            "custom_tag": ""
-          }
-        },
-        {
           "title": "Salted Caramel Brownie",
           "price": "₹120",
           "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
