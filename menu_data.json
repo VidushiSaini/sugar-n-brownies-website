@@ -4,23 +4,6 @@
       "name": "Brownies",
       "items": [
         {
-          "title": "Drunken Brownie",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "./images/jar cake.jpeg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "contains_milk": false,
-            "contains_nuts": false,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false,
-            "eggless": false,
-            "custom_tag": "Dairy Free"
-          }
-        },
-        {
           "title": "Mocha Brownie",
           "price": "₹120",
           "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
@@ -86,6 +69,23 @@
             "sugar_free": false,
             "eggless": false,
             "custom_tag": ""
+          }
+        },
+        {
+          "title": "Brownie Box",
+          "price": "₹1200",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-19_at_1.41.36_PM__1__1787127867692.jpeg",
+          "quantity": "Pack of 10",
+          "weight": "1kg",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": false,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": "Dairy Free"
           }
         }
       ]
