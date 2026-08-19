@@ -17,21 +17,6 @@
           }
         },
         {
-          "title": "Nutella Brownie",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "./images/jar cake.jpeg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "contains_milk": false,
-            "contains_nuts": true,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false
-          }
-        },
-        {
           "title": "Drunken Brownie",
           "price": "₹120",
           "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
@@ -108,6 +93,23 @@
           "weight": "500g",
           "dietary": {
             "contains_milk": true,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        },
+        {
+          "title": "Nutella Brownie",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-19_at_1.41.36_PM__3__1787127800544.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
             "contains_nuts": true,
             "vegan": false,
             "gluten_free": false,
