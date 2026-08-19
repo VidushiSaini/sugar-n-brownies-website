@@ -1194,7 +1194,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.success) {
                     showNotification('Special Offers updated successfully!');
                     // Reload the data from server to clear any base64 strings with actual paths
-                    const oRes = await fetch(\`/offers_data.json?t=\${Date.now()}\`, { cache: 'no-store' });
+                    const oRes = await fetch(`/offers_data.json?t=${Date.now()}`, { cache: 'no-store' });
                     if (oRes.ok) {
                         offersData = await oRes.json();
                         renderOffersEditor();
