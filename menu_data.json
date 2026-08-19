@@ -148,6 +148,23 @@
           "image": "Images/WhatsApp_Image_2026-08-19_at_1.41.37_PM__3__1787128132041.jpeg",
           "quantity": "Pack of 4",
           "weight": ""
+        },
+        {
+          "title": "Valentines Bow Cupcake",
+          "price": "₹0",
+          "description": "Pizza",
+          "image": "Images/WhatsApp_Image_2026-08-19_at_1.41.37_PM_1787128156429.jpeg",
+          "quantity": "1 box",
+          "weight": "500 g",
+          "dietary": {
+            "contains_milk": true,
+            "contains_nuts": false,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
         }
       ]
     },
@@ -171,26 +188,6 @@
     {
       "name": "Desserts",
       "items": []
-    },
-    {
-      "name": "Savouries",
-      "items": [
-        {
-          "title": "Pizza",
-          "price": "₹0",
-          "description": "Pizza",
-          "image": "Images/Logo 3.jpg",
-          "quantity": "1 box",
-          "weight": "500 g",
-          "dietary": {
-            "contains_milk": true,
-            "contains_nuts": false,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false
-          }
-        }
-      ]
     }
   ]
 }
