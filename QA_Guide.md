@@ -1,5 +1,5 @@
 # Technical Testing Document (QA Guide)
-**Project:** Sugar 'n Brownies Bakery Website
+**Project:** Pune Artisan Bakehouse Bakery Website
 **Date:** August 2026
 
 This guide provides a step-by-step checklist for verifying the technical integrity of the backend endpoints, JSON persistence, file uploads, and DOM manipulation logic.

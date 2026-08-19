@@ -1,4 +1,4 @@
-# Sugar 'n Brownies 🍰
+# Pune Artisan Bakehouse 🍰
 
 A custom, high-performance web application and digital storefront built for a local home bakery in Pune. 
 

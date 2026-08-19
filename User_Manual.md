@@ -1,4 +1,4 @@
-# Sugar 'n Brownies - Website User Manual
+# Pune Artisan Bakehouse - Website User Manual
 
 Welcome to your new Bakery Admin Dashboard! This guide will show you how to easily update your bakery's menu, change prices, and add new delicious items without touching any code.
 

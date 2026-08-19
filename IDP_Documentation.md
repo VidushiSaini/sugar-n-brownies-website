@@ -1,5 +1,5 @@
 # Internal Developer Portal (IDP) Documentation
-**Project:** Sugar 'n Brownies Bakery Website
+**Project:** Pune Artisan Bakehouse Bakery Website
 **Tech Stack:** Vanilla HTML/JS, Tailwind CSS, Node.js (Zero-dependency backend)
 
 This document outlines the final project architecture and summarizes the key data pipelines and features implemented in the latest release to assist future maintainers.
