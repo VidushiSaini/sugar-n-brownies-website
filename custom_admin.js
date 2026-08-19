@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let galleryData = null;
     let settingsData = null;
     let contentData = null;
+    let offersData = null;
 
     let currentCategoryFilter = 'All';
     const searchInput = document.getElementById('menu-search');
@@ -171,6 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderContentEditor();
             }
 
+            const oRes = await fetch(`/offers_data.json?t=${Date.now()}`, { cache: 'no-store' });
+            if (oRes.ok) {
+                offersData = await oRes.json();
+                if (!offersData.offers_list) offersData.offers_list = [];
+                renderOffersEditor();
+            }
         } catch (e) {
             console.error('Failed to load data', e);
             showNotification('Could not load data. Ensure server is running.', true);
@@ -1053,4 +1060,155 @@ document.addEventListener('DOMContentLoaded', () => {
             if (spinner) spinner.classList.add('hidden');
         }
     });
+
+    // Special Offers Logic
+    const renderOffersEditor = () => {
+        const list = document.getElementById('offers-editor-list');
+        if (!list) return;
+        list.innerHTML = '';
+        
+        if (!offersData || !offersData.offers_list) return;
+
+        offersData.offers_list.forEach((offer, idx) => {
+            const item = document.createElement('div');
+            item.className = 'border border-gray-200 p-4 rounded bg-gray-50 flex flex-col md:flex-row gap-6 relative';
+            item.innerHTML = `
+                <button class="absolute top-2 right-2 text-red-500 hover:text-red-700" onclick="removeOffer(${idx})">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                </button>
+                <div class="w-full md:w-1/3 flex flex-col items-center justify-center gap-2">
+                    <label class="block text-sm font-bold text-gray-500 uppercase">Background Image</label>
+                    <img id="offer-img-preview-${idx}" src="${offer.image || ''}" class="w-full h-32 object-cover rounded border">
+                    <input type="file" id="offer-img-file-${idx}" class="hidden" accept="image/*">
+                    <button id="offer-img-btn-${idx}" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-1 px-4 border border-gray-300 rounded text-sm">Change Image</button>
+                    <input type="hidden" id="offer-img-val-${idx}" value="${offer.image || ''}">
+                </div>
+                <div class="w-full md:w-2/3 flex flex-col gap-4">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-500 uppercase mb-1">Subheading</label>
+                        <input type="text" id="offer-title-${idx}" value="${offer.title || ''}" class="w-full border border-gray-300 rounded p-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-500 uppercase mb-1">Main Headline</label>
+                        <textarea id="offer-desc-${idx}" rows="2" class="w-full border border-gray-300 rounded p-2">${offer.description || ''}</textarea>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-1/2">
+                            <label class="block text-sm font-bold text-gray-500 uppercase mb-1">Button Text</label>
+                            <input type="text" id="offer-cta-${idx}" value="${offer.cta_type || ''}" class="w-full border border-gray-300 rounded p-2">
+                        </div>
+                        <div class="w-1/2">
+                            <label class="block text-sm font-bold text-gray-500 uppercase mb-1">Button Link</label>
+                            <input type="text" id="offer-link-${idx}" value="${offer.custom_link || ''}" class="w-full border border-gray-300 rounded p-2" placeholder="e.g. https://... or /menu.html">
+                        </div>
+                    </div>
+                </div>
+            `;
+            list.appendChild(item);
+
+            // Image upload handling
+            const btn = document.getElementById(`offer-img-btn-${idx}`);
+            const fileInput = document.getElementById(`offer-img-file-${idx}`);
+            const preview = document.getElementById(`offer-img-preview-${idx}`);
+            const valInput = document.getElementById(`offer-img-val-${idx}`);
+
+            btn.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', async (e) => {
+                if (e.target.files && e.target.files[0]) {
+                    try {
+                        const file = e.target.files[0];
+                        const reader = new FileReader();
+                        reader.onload = (re) => {
+                            preview.src = re.target.result;
+                            valInput.value = re.target.result; // Temporarily hold base64 string
+                        };
+                        reader.readAsDataURL(file);
+                    } catch (error) {
+                        alert("Error previewing image");
+                    }
+                }
+            });
+        });
+    };
+
+    window.removeOffer = (idx) => {
+        if(confirm("Are you sure you want to remove this offer?")) {
+            offersData.offers_list.splice(idx, 1);
+            renderOffersEditor();
+        }
+    };
+
+    const addOfferBtn = document.getElementById('add-offer-btn');
+    if (addOfferBtn) {
+        addOfferBtn.addEventListener('click', () => {
+            if (!offersData) offersData = { offers_list: [] };
+            if (!offersData.offers_list) offersData.offers_list = [];
+            offersData.offers_list.push({
+                title: "NEW OFFER",
+                description: "Describe the offer here.",
+                image: "",
+                cta_type: "Click Here",
+                custom_link: "#"
+            });
+            renderOffersEditor();
+        });
+    }
+
+    const saveOffersBtn = document.getElementById('offers-save-btn');
+    if (saveOffersBtn) {
+        saveOffersBtn.addEventListener('click', async () => {
+            const btnSpinner = saveOffersBtn.querySelector('.spinner');
+            saveOffersBtn.disabled = true;
+            btnSpinner.classList.remove('hidden');
+
+            try {
+                // Gather data from DOM
+                const newList = [];
+                const len = offersData.offers_list ? offersData.offers_list.length : 0;
+                
+                for (let i = 0; i < len; i++) {
+                    const title = document.getElementById(`offer-title-${i}`)?.value || '';
+                    const description = document.getElementById(`offer-desc-${i}`)?.value || '';
+                    const cta = document.getElementById(`offer-cta-${i}`)?.value || '';
+                    const link = document.getElementById(`offer-link-${i}`)?.value || '';
+                    let imageVal = document.getElementById(`offer-img-val-${i}`)?.value || '';
+
+                    newList.push({
+                        title: title,
+                        description: description,
+                        cta_type: cta,
+                        custom_link: link,
+                        image: imageVal
+                    });
+                }
+                
+                const finalData = { offers_list: newList };
+
+                const res = await fetch('/api/save-offers', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(finalData)
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    showNotification('Special Offers updated successfully!');
+                    // Reload the data from server to clear any base64 strings with actual paths
+                    const oRes = await fetch(\`/offers_data.json?t=\${Date.now()}\`, { cache: 'no-store' });
+                    if (oRes.ok) {
+                        offersData = await oRes.json();
+                        renderOffersEditor();
+                    }
+                } else {
+                    showNotification(data.error || 'Failed to save offers.', true);
+                }
+            } catch(e) {
+                showNotification('Network error saving offers.', true);
+            } finally {
+                saveOffersBtn.disabled = false;
+                btnSpinner.classList.add('hidden');
+            }
+        });
+    }
+
 });
