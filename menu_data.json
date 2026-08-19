@@ -167,23 +167,7 @@
     },
     {
       "name": "Desserts",
-      "items": [
-        {
-          "title": "Thandai Tres Leches",
-          "price": "100",
-          "description": "Thandai Tres Leches",
-          "image": "Images/WhatsApp Image 2026-08-06 at 12.00.01 PM _2_.jpeg",
-          "quantity": "1 Piece",
-          "weight": "100 gm",
-          "dietary": {
-            "contains_milk": true,
-            "contains_nuts": true,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false
-          }
-        }
-      ]
+      "items": []
     },
     {
       "name": "Savouries",
