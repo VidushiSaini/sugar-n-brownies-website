@@ -3,21 +3,23 @@
     {
       "title": "Buy 2 Get 1 Free on Brownies!",
       "description": "Treat yourself and your friends. Order any two signature brownies and get a third absolutely free.",
-      "image": "Images/WhatsApp Image 2026-08-06 at 2.24.10 PM.jpeg",
-      "cta_type": "Order via WhatsApp"
+      "cta_type": "Order via WhatsApp",
+      "custom_link": "",
+      "image": "Images/offer_1787131234922_0.jpg"
     },
     {
       "title": "Festive Special Cakes",
       "description": "Pre-book your custom festive cakes now and get a 10% discount on orders above ₹1000.",
-      "image": "Images/cake3.jpeg",
       "cta_type": "View Menu",
-      "custom_link": "http://localhost:8000/menu.html"
+      "custom_link": "http://localhost:8000/menu.html",
+      "image": "Images/offer_1787131235943_1.jpg"
     },
     {
       "title": "Midnight Cravings?",
       "description": "We are open 24/7! Order your favorite jar cakes right to your doorstep.",
-      "image": "Images/jar cake.jpeg",
-      "cta_type": "Order on Zomato"
+      "cta_type": "Order on Zomato",
+      "custom_link": "",
+      "image": "Images/offer_1787131236826_2.jpg"
     }
   ]
 }
