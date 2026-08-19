@@ -4,19 +4,6 @@
       "name": "Brownies",
       "items": [
         {
-          "title": "Cookies N Cream Brownie",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "./images/jar cake.jpeg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "vegan": false,
-            "gluten_free": false,
-            "contains_nuts": true
-          }
-        },
-        {
           "title": "Drunken Brownie",
           "price": "₹120",
           "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
