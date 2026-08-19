@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (offer.cta_type && offer.cta_type !== "None") {
                     let link = offer.custom_link || "#";
                     if (offer.cta_type === "Order via WhatsApp") {
-                        link = `https://wa.me/919870198838?text=${encodeURIComponent('Hi, I am interested in the offer: ' + (offer.title || offer.description))}`;
+                        link = "javascript:void(0)";
                     } else if (offer.cta_type === "View Menu") {
                         link = "menu.html";
                     } else if (offer.cta_type === "Order on Zomato") {
-                        link = "https://zomato.onelink.me/xqzv/lvqo7o1h";
+                        link = "javascript:void(0)";
                     }
                     
                     const ctaClass = offer.cta_type === "Order on Zomato" 

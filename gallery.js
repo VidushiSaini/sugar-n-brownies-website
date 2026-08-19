@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // WhatsApp Button
                 const waBtn = document.createElement('a');
                 const message = encodeURIComponent(`Hi, I would like to pre-order a custom cake similar to the one in your gallery: "${item.title}".`);
-                waBtn.href = `https://wa.me/${phoneNumber}?text=${message}`;
+                waBtn.href = "javascript:void(0)";
                 waBtn.target = '_blank';
                 waBtn.className = 'mt-auto block w-full text-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 rounded-lg shadow transition-colors flex items-center justify-center gap-2';
                 waBtn.innerHTML = `
