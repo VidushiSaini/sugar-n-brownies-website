@@ -109,23 +109,6 @@
             "eggless": false,
             "custom_tag": ""
           }
-        },
-        {
-          "title": "Banana Healthy Cake",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "Images/WhatsApp_Image_2026-08-06_at_2.24.09_PM_1786018244046.jpeg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "contains_milk": false,
-            "contains_nuts": true,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false,
-            "eggless": false,
-            "custom_tag": ""
-          }
         }
       ]
     },
