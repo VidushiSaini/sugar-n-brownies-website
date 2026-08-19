@@ -77,23 +77,6 @@
       "name": "Healthy Cakes",
       "items": [
         {
-          "title": "Rawa Healthy Cake",
-          "price": "₹120",
-          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
-          "image": "Images/WhatsApp_Image_2026-08-06_at_11.59.59_AM__1__1786018218712.jpeg",
-          "quantity": "Pack of 4",
-          "weight": "500g",
-          "dietary": {
-            "contains_milk": false,
-            "contains_nuts": true,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false,
-            "eggless": false,
-            "custom_tag": ""
-          }
-        },
-        {
           "title": "Chocochip Walnut Healthy Cake",
           "price": "₹120",
           "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
@@ -115,6 +98,23 @@
           "price": "₹120",
           "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
           "image": "Images/WhatsApp_Image_2026-08-06_at_2.24.09_PM_1786018244046.jpeg",
+          "quantity": "Pack of 4",
+          "weight": "500g",
+          "dietary": {
+            "contains_milk": false,
+            "contains_nuts": true,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          }
+        },
+        {
+          "title": "Matcha Cake",
+          "price": "₹120",
+          "description": "Rich, gooey chocolate goodness baked fresh daily. Click to pre-order!",
+          "image": "Images/WhatsApp_Image_2026-08-19_at_1.41.35_PM__1__1787127954100.jpeg",
           "quantity": "Pack of 4",
           "weight": "500g",
           "dietary": {
