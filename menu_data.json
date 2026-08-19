@@ -131,6 +131,23 @@
             "eggless": false,
             "custom_tag": ""
           }
+        },
+        {
+          "dietary": {
+            "contains_milk": true,
+            "contains_nuts": false,
+            "vegan": false,
+            "gluten_free": false,
+            "sugar_free": false,
+            "eggless": false,
+            "custom_tag": ""
+          },
+          "title": "Valentines Cupcake Love",
+          "price": "200",
+          "description": "Red Velvet cupcakes topped with rich cream cheese swirl icing",
+          "image": "Images/WhatsApp Image 2026-08-06 at 2.24.10 PM (2).jpeg",
+          "quantity": "Pack of 4",
+          "weight": ""
         }
       ]
     },
@@ -148,20 +165,6 @@
           "title": "Mango Delight",
           "price": "300",
           "image": "Images/WhatsApp Image 2026-08-06 at 12.00.00 PM (4).jpeg"
-        },
-        {
-          "dietary": {
-            "contains_milk": true,
-            "contains_nuts": false,
-            "vegan": false,
-            "gluten_free": false,
-            "sugar_free": false
-          },
-          "title": "Valentines Cupcake Love",
-          "price": "200",
-          "description": "Red Velvet cupcakes topped with rich cream cheese swirl icing",
-          "image": "Images/WhatsApp Image 2026-08-06 at 2.24.10 PM (2).jpeg",
-          "quantity": "Pack of 4"
         }
       ]
     },
